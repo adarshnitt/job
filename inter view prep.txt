@@ -1,4 +1,5 @@
-﻿Engineering is the application of scientific principles, mathematics, and creativity to design, build, and improve systems, machines, structures, and processes that solve real-world problems.
+AI- https://docs.google.com/document/d/1V3NK7Ot8UPSNxTSkv6eYQjQnLU6fdAdy7MS4K4rCji4/edit?pli=1&tab=t.0
+Engineering is the application of scientific principles, mathematics, and creativity to design, build, and improve systems, machines, structures, and processes that solve real-world problems.
 
 
 
@@ -449,4 +450,5 @@ AI Agents:
   
   
 The Agent2Agent (A2A) Protocol is an open standard designed to enable seamless communication and collaboration between AI agents.  
+
 A2a: agent to agent protocol hai  jaha , 1 agents dusre agents se baat karta. They identify each other using agent card jisme likha hota ki agent kya kaam karta
