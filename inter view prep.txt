@@ -1,0 +1,452 @@
+﻿Engineering is the application of scientific principles, mathematics, and creativity to design, build, and improve systems, machines, structures, and processes that solve real-world problems.
+
+
+
+
+Accenture:
+1. Accenture song: marketing
+2. Accenture strategy: consulting
+3. Accenture technology: ai/ml
+Digital engineering: use of digital technologies, tools and data to transform business or manage business
+ Proactive: Definition: Anticipating problems or opportunities and acting in advance.
+
+
+gpt4(128k)
+	13 trillion token trained
+	1-2 trillion param
+	llama(128k)
+	3 trillion tokens traines
+	7-70 billion param
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	Data protection policy: GDPR(GEneral data protection regulatory)
+Google: vertex ai
+Ibm: watson ai
+GPT stands for Generative Pre-trained Transformer.
+Ai mimic human cognitive capabilities
+
+
+() if for pattern, will give only matched data, matched grp text for future use, avoid it
+(?:) for matched grp, prefer this
+[]: For set of range feature, [a-b],[^0-9] 
+
+
+Both Llama and GPT models are built on the Transformer architecture
+
+
+API pricing (per million tokens) pgt o1: $15 (input text), $60 (output expected text) DeepSeek-R1: $0.55 (input), $2.19 (output text) for deep seek , why input and output
+* Input tokens are cheaper because they only require reading and encoding.
+* Output tokens are more expensive because they require generation, which is computationally heavier (involves sampling, decoding, and more memory).
+
+
+
+
+Deep seek models
+echnique
+	Purpose
+	Used In
+	RLHF
+	Aligns model with human values
+	DeepSeek-R1, R1-Zero
+	Distillation
+	Compresses knowledge into smaller models
+	DeepSeek-Coder, V2, R1
+	
+
+
+
+  
+
+
+
+Mixture of experts      
+
+
+
+
+
+
+System
+	Focus
+	Strength
+	Limitation
+	AutoGPT
+	General-purpose autonomy
+	Fully autonomous task execution
+	Prone to loops, less structured
+	OpenAgents
+	Multi-agent collaboration
+	Modular, tool-rich, scalable
+	Requires setup and orchestration
+	MetaGPT
+	Software engineering agent
+	Structured, role-based task execution
+	Focused mainly on software workflows
+	
+
+Aspect
+	AI Agent
+	Agentic AI
+	Autonomy
+	Limited
+	High
+	Task Scope
+	Single or short-term tasks
+	Multi-step, long-term goals
+	Memory
+	Often stateless
+	Maintains memory and context
+	Planning
+	Minimal
+	Advanced planning and reasoning
+	Examples
+	Chatbots, assistants
+	AutoGPT, BabyAGI, DeepSeek Agent, OpenAgents
+	LLaMA 4 (April 2025)
+* Multimodal models with text and image capabilities.
+* Uses Mixture-of-Experts (MoE) architecture.
+* Key variants:
+   * LLaMA 4 Scout: 17B parameters, 16 experts
+   * LLaMA 4 Maverick: 17B parameters, 128 experts
+   * LLaMA 4 Behemoth: Up to 2 trillion parameters
+
+
+
+
+
+
+Model Name
+	Parameter Size
+	Token Limit (Context Length)
+	LLaMA 1
+	7B, 13B, 30B, 65B
+	2,048 tokens
+	LLaMA 2
+	7B, 13B, 70B
+	4,096 tokens
+	Code LLaMA
+	7B, 13B, 34B
+	16,384 tokens
+	LLaMA 3.1
+	8B, 70B, 405B
+	8,192 tokens
+	LLaMA 3.2 (Multilingual)
+	1B, 3B
+	8,192 tokens
+	LLaMA 3.2 (Vision)
+	11B, 90B
+	8,192 tokens (text) + image input
+	LLaMA 3.3 (Chat)
+	70B
+	8,192 tokens
+	LLaMA 4 Scout
+	17B (MoE)
+	128,000 tokens
+	LLaMA 4 Maverick
+	17B (MoE, 128 experts)
+	128,000 tokens
+	LLaMA 4 Behemoth
+	~2T (MoE)
+	128,000 tokens
+	LLaMA Evaluation Tasks Explained
+Task
+	Description
+	needle_in_haystack
+	Tests long-context retrieval: a small fact (the "needle") is hidden in a long passage (the "haystack"), and the model must find it.
+	multi_needle
+	A harder version of the above — multiple facts are hidden, and the model must retrieve all of them.
+	mmlu
+	Massive Multitask Language Understanding: 57 subjects (math, law, medicine, etc.) in a multiple-choice format to test expert-level reasoning.
+	squad
+	Stanford Question Answering Dataset: Given a passage, the model must answer questions by extracting the correct span.
+	quac
+	Question Answering in Context: Similar to SQuAD, but with multi-turn dialogue — tests contextual understanding.
+	drop
+	Discrete Reasoning Over Paragraphs: Requires numerical reasoning, date comparisons, and multi-step logic over text.
+	arc_challenge
+	AI2 Reasoning Challenge: Grade-school science questions that require commonsense and scientific reasoning.
+	agieval_english
+	Part of the AGIEval benchmark: evaluates academic-level English comprehension, often used to test models on standardized exam-like questions.
+	GPT stands for Generative Pre-trained Transformer.(gpt4 -96 transformers stacked
+Model Type
+	Architecture
+	Use Case
+	Examples
+	Encoder-only
+	Only encoder stack
+	Understanding tasks (classification, embedding)
+	BERT, RoBERTa, DistilBERT, ALBERT
+	Decoder-only
+	Only decoder stack
+	Text generation
+	GPT series, LLaMA, Falcon, Mistral, Grok
+	Encoder-Decoder
+	Both encoder & decoder
+	Sequence-to-sequence (translation, summarization)
+	T5, BART, mT5, MarianMT, Pegasus
+	)What is Unidirectional Attention?
+Unidirectional attention (also called causal attention) is a mechanism where each token in a sequence can only attend to previous tokens, not future ones used by decodes(gpts) to predict next tokens
+What is Reinforcement Learning (RL)?
+Reinforcement Learning is a type of machine learning where an agent learns to make decisions by interacting with an environment. The agent receives rewards or penalties based on its actions and learns to maximize cumulative reward over time.
+
+
+
+
+RLHF (Reinforcement Learning from Human Feedback) is a technique used to fine-tune language models like GPT by incorporating human preferences. After pretraining, the model is first fine-tuned on human-written responses, then trained to predict which outputs humans prefer using a reward model, and finally optimized using reinforcement learning (typically PPO) to generate more helpful, safe, and aligned responses. This process helps the model better follow instructions and behave more usefully in real-world interactions.
+
+
+How DeepSeek Works
+Component
+	Description
+	Architecture
+	Transformer-based with Mixture-of-Experts (MoE) — 6671B total parameters, but only 37B active per task for efficiency.
+	MoE System
+	Activates only the most relevant "experts" (sub-networks) for a given input, reducing compute cost by ~95%.
+	Multi-Head Latent Attention (MLA)
+	Enhances attention by capturing nuanced relationships across long sequences.
+	Context Length
+	Supports up to 128,000 tokens, ideal for large documents or codebases.
+	Variants
+	Includes DeepSeek-Coder, DeepSeek-VL (vision-language), DeepSeek-R1 (reasoning), and DeepSeek-V3 (latest).
+	
+
+
+
+GPT vs DeepSeek: Technical Comparison
+Aspect
+	GPT (e.g., GPT-4, GPT-4 Turbo)
+	DeepSeek (e.g., DeepSeek-V3, DeepSeek-Coder)
+	Architecture
+	Transformer (decoder-only)
+	Transformer with Mixture-of-Experts (MoE)
+	Parameter Usage
+	All parameters active per input
+	Only a subset of experts (e.g., 2 of 64) active per input
+	Efficiency
+	High compute cost for large models
+	Highly efficient due to sparse activation
+	Context Length
+	Up to 128K tokens (GPT-4 Turbo, GPT-40)
+	Up to 128K tokens
+	Training Approach
+	Pretraining → SFT → RLHF
+	Pretraining → Instruction tuning → MoE routing
+	Alignment Technique
+	RLHF (Reinforcement Learning from Human Feedback)
+	RLHF + expert routing for specialization
+	GPT vs DeepSeek: Technical Comparison
+Aspect
+	GPT (e.g., GPT-4, GPT-4 Turbo)
+	DeepSeek (e.g., DeepSeek-V3, DeepSeek-Coder)
+	Architecture
+	Transformer (decoder-only)
+	Transformer with Mixture-of-Experts (MoE)
+	Parameter Usage
+	All parameters active per input
+	Only a subset of experts (e.g., 2 of 64) active per input
+	Efficiency
+	High compute cost for large models
+	Highly efficient due to sparse activation
+	Context Length
+	Up to 128K tokens (GPT-4 Turbo, GPT-40)
+	Up to 128K tokens
+	Training Approach
+	Pretraining → SFT → RLHF
+	Pretraining → Instruction tuning → MoE routing
+	Alignment Technique
+	RLHF (Reinforcement Learning from Human Feedback)
+	RLHF + expert routing for specialization
+	Anthropic: AI guardrails are controls and safety mechanisms designed to guide and limit what an AI system can do. Their main purpose is to prevent harmful, incorrect, or unintended behavior.
+Llama Guard 4 Model Card
+Model Details
+Llama Guard 4 is a natively multimodal safety classifier with 12 billion parameters trained jointly on text and multiple images. Llama Guard 4 is a dense architecture pruned from the Llama 4 Scout pre-trained model and fine-tuned for content safety classification. Similar to previous versions, it can be used to classify content in both LLM inputs (prompt classification) and in LLM responses (response classification). It itself acts as an LLM: it generates text in its output that indicates whether a given prompt or response is safe or unsafe, and if unsafe, it also lists the content categories violated.
+Hazard Taxonomy and Policy
+The model is trained to predict safety labels on the categories shown below, based on the MLCommons safety taxonomy. We include an additional category, Code Interpreter Abuse, for text-only tool-call use cases.
+Hazard categories
+	S1: Violent Crimes
+	S2: Non-Violent Crimes
+	S3: Sex-Related Crimes
+	S4: Child Sexual Exploitation
+	S5: Defamation
+	S6: Specialized Advice
+	S7: Privacy
+	S8: Intellectual Property
+	S9: Indiscriminate Weapons
+	S10: Hate
+	S11: Suicide & Self-Harm
+	S12: Sexual Content
+	S13: Elections
+	S14: Code Interpreter Abuse (text only)
+	
+
+Multi-Head Latent Attention (MLA)  use LORA/CLORA fine tuning technique— Efficient Attention for LLMs
+* 📦 Compresses key-value (KV) memory using a shared latent space.
+* 🧠 Multiple heads still exist, but they share compressed info instead of storing full data.
+* 🚀 Reduces memory usage by up to 93% in long-context inference.
+* ⚡ Speeds up inference (e.g., 10× faster at 8K tokens).
+* 🧩 Used in TransMLA (DeepSeek) to make LLMs faster and lighter.
+________________
+
+
+🤖 Proximal Policy Optimization (PPO) — Safe Learning in RLHF
+* 🎯 Used in Reinforcement Learning from Human Feedback (RLHF).
+* 🧪 Learns by trying actions and getting reward signals.
+* 🛡️ Limits how much the model can change in one update (to avoid instability). Chote steps lo, to avoid bhool na jao ki kya learning thi
+* ✅ Ensures stable, safe, and efficient fine-tuning.
+But here’s the problem:
+If the robot changes its walking style too much at once, it might fall and forget what it learned.
+PPO to the rescue:
+* PPO says: “Try new things, but not too far from what you already know.”
+* It limits how much the robot can change its behavior in one update.
+* This makes learning stable and safe.
+* * 🔧 Commonly used to align LLMs with human preferences (e.g., helpfulness, safety).
+DeepSeek AI Model Lineup
+Model
+	Purpose / Specialization
+	DeepSeek-67B
+	Early general-purpose model, dense transformer
+	DeepSeek-V2
+	Efficient Mixture-of-Experts (MoE) model (236B total, 21B active); optimized for speed and cost
+	DeepSeek-Coder
+	Specialized in code generation and understanding
+	DeepSeek-Coder V2
+	Enhanced version with 128K context, better reasoning and debugging
+	DeepSeek-V3 (Base)
+	Foundation model with 671B parameters (37B active); used for further tuning
+	DeepSeek-V3 (Chat)
+	Instruction-tuned + RLHF version of V3; excels in math, coding, and general conversation
+	DeepSeek-R1-Zero
+	Trained only with reinforcement learning, no supervised fine-tuning
+	DeepSeek-R1
+	Reasoning-focused model using SFT + RLHF; excels in logic, math, and long-context tasks
+	DeepSeek-VL
+	Vision-language model for multimodal tasks (text + image)
+	________________
+
+
+🔍 Key Technologies Used Across Models
+* Mixture-of-Experts (MoE): Efficient scaling by activating only a few experts per input.
+* Multi-head Latent Attention (MLA): Reduces memory and compute cost/ ppo technique, take sammler update rather than larger steps.ppo is optimization texhnique
+* Reinforcement Learning (RLHF): Aligns models with human preferences.
+* Distillation: Transfers knowledge from large models to smaller, efficient ones.
+RLHF: Step-by-Step Process
+Stage
+	What Happens
+	Purpose
+	1. Supervised Fine-Tuning (SFT)
+	Human labelers write ideal responses to prompts. The model is fine-tuned on these examples.
+	Teaches the model how to respond helpfully.
+	2. Reward Modeling
+	The model generates multiple responses. Humans rank them from best to worst. A reward model is trained on these rankings.
+	Helps the model learn what humans prefer.
+	3. Reinforcement Learning (PPO)
+	The model is trained using Proximal Policy Optimization (PPO) to maximize the reward signal from the reward model.
+	Fine-tunes the model to generate more preferred responses.
+	Rag Techniques Based on Retrieval Strategy
+🔹 Dense Retrieval
+* Uses vector embeddings (e.g., from BERT, Sentence Transformers).
+* Tools: FAISS, Weaviate, Qdrant.
+🔹 Sparse Retrieval
+* Traditional keyword-based (e.g., BM25).
+* Tools: Elasticsearch, Lucene.
+Think of MCP as:
+* A translator: It lets LLMs "speak" to various tools in a common language.
+* A connector: Like a universal adapter that plugs into any tool or service.
+* An interface standard: Similar to how HTTP standardized the web, MCP standardizes how LLMs call tools 1.
+
+
+\We wee connecting with tools from a agents but we need mcp which is also connecting with external tools(formal way of connecting tools with llms): 
+ MCP defines a common protocol (set of rules and message formats)
+
+
+To connect web: use http prototcol
+To connect llm from external tool: use mcp protocol
+
+
+Without MCP, agents connect with langchai to tools
+	With MCP
+	Custom code for each tool
+	Standardized tool interface
+	Hard to reuse across agents
+	Tools are reusable and discoverable
+	Tight coupling with LLM vendor
+	Decoupled, works across LLMs
+	Manual orchestration
+	Dynamic, protocol-driven orchestration
+	
+
+
+
+ Top-p. Top -k, temperature:
+  so if i want to make note then, we can say that: top p means topp p%(90%) words from possible vocab which could be next word based on previous world. 
+temp t means if t is more then there are chances that that world is less probabale to come while is temp is less then that word is more probabale to come as next word. topk means top k count words which we dould consider for prediction of next words.
+
+
+So first we have vocab, top p use karke 90% words top ke filter out ho jayege, agar temp jyada hai to  less pobable words ko priority di jayegi ki vo aye varna  agar temp kam hai to more probabale word ko priority di jayegi ki vo prdict ho as next word.
+
+
+
+
+Prompting:
+1. Few shots
+2. Chain of thought(cot): Prompt  use to solve complex task by splitting it into smaller sub tasks
+3. Tree of thought: explaining model for different scenarios how to act
+
+
+
+
+RAG:(Retrieval augmentation generation)
+Isme hum  user input lete, uske basic pe jo most sismlar data knowledge base me hota usko pick karte aur phir ye data + user prompt (new data augmented prompt bolte) ko llm ko dtee aur phir llm output deta
+
+
+docs-> embedding(hugguing face model)-> stroe(FAISS), 
+FAISS: compare similarity using eucledian distance or cosine similarity
+
+
+prompt(user_query)-- get most matched data from store—---> (new prompt will be: user_query+ matched _data_from _store==augmented prompt)
+
+
+Now augmented_prompt(new_prompt) will inject insto llm and get augmented final output
+
+
+Prompt tuning
+1. Ful fine tuning: update  all wr=eight
+2. PEFt: parameter efficient fine tuning: LORA, QLORA, DORA
+                Lora: freeze original weights/ use adapters and train those adapter. Finally use adapters with original weight, so we need to tune  only adapters
+3. Prompt tuning, prefix tuning(input dene se pahele hi update kardo input ko using prompt)
+
+
+Trust in fully autonomous AI agents is declining, dropping from 43% to 27% in o
+AI Agents:
+* Types of ai agents
+1. Simple agent: if temp of room go up or down, turn on/off room heater
+2. Memory base agent:  clean a room using vacuum cleaner, remember what area has been cleaned and which is not cleaned
+3. Goal based: enhancement of memory one, + it will split bigger task into smaller task and then plan to act on it
+4. No goal, best optimal solution: share market me 10k invest kara, jyada se jyada profit aaye
+* How agents train
+1. Customize for ur own data: use rag
+2. Guide which tool need to use: tools-prompt engineering
+* Components: persona, memory, llm and tools
+
+
+  
+  
+  
+The Agent2Agent (A2A) Protocol is an open standard designed to enable seamless communication and collaboration between AI agents.  
+A2a: agent to agent protocol hai  jaha , 1 agents dusre agents se baat karta. They identify each other using agent card jisme likha hota ki agent kya kaam karta
